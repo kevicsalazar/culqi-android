@@ -1,0 +1,19 @@
+<resources>
+
+    <style name="AppTheme.Checkout" parent="Theme.AppCompat.Light.Dialog">
+        <item name="windowNoTitle">true</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+    <style name="AppTheme.Checkout.ProgressBar" parent="Widget.AppCompat.ProgressBar">
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+
+</resources>

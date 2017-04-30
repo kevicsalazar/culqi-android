@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_accent">#0AA6A9</color>
+    <color name="color_pay_button">#0AA6A9</color>
+    <color name="color_pay_button_pressed">#079598</color>
+    <color name="color_pay_button_disabled">#A1A1A1</color>
+</resources>

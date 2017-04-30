@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Culqi-Kotlin</string>
+    <string name="txt_button_payment">Pagar</string>
+    <string name="txt_form_title">CULQI CHECKOUT</string>
+    <string name="txt_card_number">4444 333 222 1111</string>
+    <string name="txt_date">mm/yy</string>
+    <string name="txt_cvv2">xxx</string>
+    <string name="name">Nombre</string>
+    <string name="txt_lastname">Apellidos</string>
+    <string name="ic_email">Correo</string>
+</resources>

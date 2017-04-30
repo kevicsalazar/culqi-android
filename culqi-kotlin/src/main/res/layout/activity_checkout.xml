@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="52dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_form_title"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_form"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/ivCardIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="2dp"
+                        android:contentDescription="@string/app_name"
+                        android:tint="?attr/colorAccent"
+                        app:srcCompat="@drawable/ic_credit_card"/>
+
+                    <EditText
+                        android:id="@+id/etCardNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/ivCardIcon"
+                        android:layout_toStartOf="@+id/ivCardType"
+                        android:background="@android:color/white"
+                        android:hint="@string/txt_card_number"
+                        android:inputType="number"
+                        android:padding="4dp"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:id="@+id/ivCardType"
+                        android:layout_width="30dp"
+                        android:layout_height="22dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="2dp"
+                        android:contentDescription="@string/app_name"
+                        tools:src="@drawable/mc"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#dddddd"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/layoutDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/line1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/ivCalendarIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:contentDescription="@string/app_name"
+                            android:tint="?attr/colorAccent"
+                            app:srcCompat="@drawable/ic_calendar"/>
+
+                        <EditText
+                            android:id="@+id/etExpirationDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/white"
+                            android:hint="@string/txt_date"
+                            android:inputType="date"
+                            android:maxLength="5"
+                            android:padding="4dp"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/line1"
+                        android:layout_width="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/layoutDate"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="#dddddd"/>
+
+                    <LinearLayout
+                        android:id="@+id/layoutCVV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/line1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/ivCVVIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:contentDescription="@string/app_name"
+                            android:tint="?attr/colorAccent"
+                            app:srcCompat="@drawable/ic_lock"/>
+
+                        <EditText
+                            android:id="@+id/etCVV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/white"
+                            android:hint="@string/txt_cvv2"
+                            android:padding="4dp"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#dddddd"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/layoutName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/line2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/ivNameIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:contentDescription="@string/app_name"
+                            android:tint="?attr/colorAccent"
+                            app:srcCompat="@drawable/ic_account"/>
+
+                        <EditText
+                            android:id="@+id/etName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/white"
+                            android:hint="@string/name"
+                            android:padding="4dp"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/line2"
+                        android:layout_width="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/layoutName"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="#dddddd"/>
+
+                    <LinearLayout
+                        android:id="@+id/layoutLastname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/line2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/ivLastnameIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:contentDescription="@string/app_name"
+                            android:tint="?attr/colorAccent"
+                            app:srcCompat="@drawable/ic_account"/>
+
+                        <EditText
+                            android:id="@+id/etLastname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/white"
+                            android:hint="@string/txt_lastname"
+                            android:padding="4dp"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_form"
+                android:gravity="center_vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/ivEmailIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:contentDescription="@string/app_name"
+                    android:tint="?attr/colorAccent"
+                    app:srcCompat="@drawable/ic_email"/>
+
+                <EditText
+                    android:id="@+id/etEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:hint="@string/ic_email"
+                    android:inputType="textEmailAddress"
+                    android:padding="4dp"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/btnPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_button_disabled"
+                android:padding="6dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="@string/txt_button_payment"
+                        android:textColor="#BFFFFFFF"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/tvAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="S/. 120.50"/>
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    app:theme="@style/AppTheme.Checkout.ProgressBar"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="8dp">
+
+        <ImageView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:background="@drawable/bg_logo"
+            android:contentDescription="@string/app_name"
+            android:padding="4dp"
+            android:src="@drawable/logo_checkout"/>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
