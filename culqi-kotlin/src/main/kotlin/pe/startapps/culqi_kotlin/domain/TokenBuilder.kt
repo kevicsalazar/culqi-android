@@ -1,6 +1,5 @@
 package pe.startapps.culqi_kotlin.domain
 
-import android.util.Log
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import pe.startapps.culqi_kotlin.domain.model.CulqiCard
@@ -38,7 +37,7 @@ class TokenBuilder(val apiKey: String) {
         }
 
         val retrofit = Retrofit.Builder()
-                .baseUrl(Config.BASE_URL)
+                .baseUrl(CulqiConfig.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(builder.build())
                 .build()

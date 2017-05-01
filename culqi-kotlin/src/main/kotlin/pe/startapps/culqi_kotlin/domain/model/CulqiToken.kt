@@ -7,5 +7,6 @@ import com.google.gson.annotations.SerializedName
  * @link kevicsalazar.com
  */
 data class CulqiToken(
-        @SerializedName("id") val id: String
+        @SerializedName("id") val id: String,
+        @SerializedName("card_number") val cardNumber: String
 )

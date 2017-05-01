@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Culqi-Android</string>
+    <string name="app_name">Culqi</string>
+    <string name="txt_checkout">Checkout</string>
 </resources>

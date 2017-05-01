@@ -3,6 +3,7 @@ package pe.startapps.culqi_kotlin.domain
 import android.widget.ImageView
 import pe.startapps.culqi_kotlin.R
 import java.util.*
+import java.util.regex.Pattern
 
 /**
  * @author Kevin Salazar
@@ -76,11 +77,11 @@ object CulqiValidation {
     fun expirationDate(expirationDate: String): Boolean {
         with(expirationDate) {
             try {
-                val calendar = java.util.Calendar.getInstance()
-                if (length == 2 && toInt() > calendar.get(java.util.Calendar.MONTH) && toInt() <= 12) {
+                val calendar = Calendar.getInstance()
+                if (length == 2 && toInt() <= 12) {
                     return true
                 }
-                if (length == 5 && ("20${substring(3, 5)}").toInt() >= calendar.get(java.util.Calendar.YEAR)
+                if (length == 5 && ("20${substring(3, 5)}").toInt() >= calendar.get(Calendar.YEAR)
                         && substring(0, 2).toInt() > calendar.get(java.util.Calendar.MONTH) && substring(0, 2).toInt() <= 12) {
                     return true
                 }
@@ -93,7 +94,7 @@ object CulqiValidation {
 
     fun emailAddress(email: String): Boolean {
         val ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$"
-        val p = java.util.regex.Pattern.compile(ePattern)
+        val p = Pattern.compile(ePattern)
         val m = p.matcher(email)
         return m.matches()
     }

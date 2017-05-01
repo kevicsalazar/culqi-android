@@ -11,7 +11,9 @@ import pe.startapps.culqi_kotlin.domain.model.CulqiCard
 import pe.startapps.culqi_kotlin.utils.textChangedListener
 import android.app.Activity
 import android.content.Intent
+import android.util.Log
 import com.google.gson.Gson
+import pe.startapps.culqi_kotlin.domain.CulqiConfig
 import pe.startapps.culqi_kotlin.domain.CulqiValidation
 
 
@@ -28,13 +30,14 @@ class CheckoutActivity : AppCompatActivity() {
         setContentView(R.layout.activity_checkout)
         setFinishOnTouchOutside(false)
 
-        val apiKey = intent.getStringExtra("apiKey")
         val title = intent.getStringExtra("title")
         val amount = intent.getStringExtra("amount")
         val currency = intent.getStringExtra("currency")
 
         tvTitle.text = title
         tvAmount.text = "${CulqiValidation.currency(currency)} $amount"
+
+        Log.e("API KEY", CulqiConfig.API_KEY)
 
         etCardNumber.textChangedListener {
             afterTextChanged {
@@ -97,7 +100,7 @@ class CheckoutActivity : AppCompatActivity() {
 
                 showProgress()
 
-                TokenBuilder(apiKey).createToken(card, {
+                TokenBuilder(CulqiConfig.API_KEY).createToken(card, {
                     hideProgress()
                     val resultIntent = Intent()
                     resultIntent.putExtra("successful", true)

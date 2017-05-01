@@ -336,7 +336,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        app:cardBackgroundColor="@android:color/white"
+        app:cardBackgroundColor="#DDDDDD"
         app:cardCornerRadius="6dp"
         app:cardElevation="4dp"
         app:cardPreventCornerOverlap="true"
@@ -345,10 +345,9 @@
         <ImageView
             android:layout_width="88dp"
             android:layout_height="88dp"
-            android:background="@drawable/bg_logo"
+            android:layout_margin="4dp"
             android:contentDescription="@string/app_name"
-            android:padding="4dp"
-            android:src="@drawable/logo_checkout"/>
+            android:src="@drawable/checkout"/>
 
     </android.support.v7.widget.CardView>
 

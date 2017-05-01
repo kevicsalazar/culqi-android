@@ -8,5 +8,5 @@ import com.google.gson.annotations.SerializedName
  */
 data class CulqiError(
         @SerializedName("type") val type: String,
-        @SerializedName("merchant_message") val merchantMessage: String
+        @SerializedName("merchant_message") val message: String
 )

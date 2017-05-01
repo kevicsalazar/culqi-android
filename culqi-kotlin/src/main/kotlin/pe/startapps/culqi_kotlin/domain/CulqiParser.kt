@@ -11,11 +11,11 @@ import pe.startapps.culqi_kotlin.domain.model.CulqiToken
  */
 object CulqiParser {
 
-    fun parse(data: Intent): Pair<Boolean, Any> {
+    fun parse(data: Intent, success: (token: CulqiToken) -> Unit, failure: (error: CulqiError) -> Unit) {
         if (data.getBooleanExtra("successful", false)) {
-            return Pair(true, Gson().fromJson(data.getStringExtra("token"), CulqiToken::class.java))
+            success(Gson().fromJson(data.getStringExtra("token"), CulqiToken::class.java))
         } else {
-            return Pair(false, Gson().fromJson(data.getStringExtra("error"), CulqiError::class.java))
+            failure(Gson().fromJson(data.getStringExtra("error"), CulqiError::class.java))
         }
     }
 
