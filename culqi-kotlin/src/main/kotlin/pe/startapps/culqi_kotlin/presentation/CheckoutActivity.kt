@@ -29,9 +29,12 @@ class CheckoutActivity : AppCompatActivity() {
         setFinishOnTouchOutside(false)
 
         val apiKey = intent.getStringExtra("apiKey")
+        val title = intent.getStringExtra("title")
         val amount = intent.getStringExtra("amount")
+        val currency = intent.getStringExtra("currency")
 
-        tvAmount.text = amount
+        tvTitle.text = title
+        tvAmount.text = "${CulqiValidation.currency(currency)} $amount"
 
         etCardNumber.textChangedListener {
             afterTextChanged {

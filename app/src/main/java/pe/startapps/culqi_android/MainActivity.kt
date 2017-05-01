@@ -20,7 +20,9 @@ class MainActivity : AppCompatActivity() {
         btnCheckout.setOnClickListener {
             val intent = Intent(this, CheckoutActivity::class.java)
             intent.putExtra("apiKey", BuildConfig.CULQI_API_KEY)
-            intent.putExtra("amount", "S/. 175.00")
+            intent.putExtra("title", "Culqi Checkout")
+            intent.putExtra("currency", "PEN")
+            intent.putExtra("amount", "175.00")
             startActivityForResult(intent, 1)
         }
 
@@ -32,6 +34,7 @@ class MainActivity : AppCompatActivity() {
             with(CulqiParser.parse(data)) {
                 if (first) {
                     val token = second as CulqiToken
+                    Log.e("Token", token.id)
                 } else {
                     val error = second as CulqiError
                     Log.e("Error", error.merchantMessage)

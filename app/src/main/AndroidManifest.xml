@@ -23,7 +23,7 @@
         <activity
             android:name="pe.startapps.culqi_kotlin.presentation.CheckoutActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Checkout"/>
+            android:theme="@style/AppTheme.Culqi.Checkout"/>
     </application>
 
 </manifest>

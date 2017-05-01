@@ -1,5 +1,9 @@
 package pe.startapps.culqi_kotlin.domain
 
+import android.widget.ImageView
+import pe.startapps.culqi_kotlin.R
+import java.util.*
+
 /**
  * @author Kevin Salazar
  * @link kevicsalazar.com
@@ -24,17 +28,17 @@ object CulqiValidation {
         return (s1 + s2) % 10 == 0
     }
 
-    fun bin(bin: String, kind_card: android.widget.ImageView): Int {
+    fun bin(bin: String, kind_card: ImageView): Int {
 
         if (bin.isNotEmpty()) {
             if (Integer.valueOf("" + bin[0]) == 3) {
-                kind_card.setImageResource(pe.startapps.culqi_kotlin.R.drawable.amex)
+                kind_card.setImageResource(R.drawable.amex)
                 return 4
             } else if (Integer.valueOf("" + bin[0]) == 4) {
-                kind_card.setImageResource(pe.startapps.culqi_kotlin.R.drawable.visa)
+                kind_card.setImageResource(R.drawable.visa)
                 return 3
             } else if (Integer.valueOf("" + bin[0]) == 5) {
-                kind_card.setImageResource(pe.startapps.culqi_kotlin.R.drawable.mc)
+                kind_card.setImageResource(R.drawable.mc)
                 return 3
             } else {
             }
@@ -44,13 +48,13 @@ object CulqiValidation {
 
         if (bin.length > 1) {
             if (Integer.valueOf(bin.substring(0, 2)) == 36) {
-                kind_card.setImageResource(pe.startapps.culqi_kotlin.R.drawable.diners)
+                kind_card.setImageResource(R.drawable.diners)
                 return 3
             } else if (Integer.valueOf(bin.substring(0, 2)) == 38) {
-                kind_card.setImageResource(pe.startapps.culqi_kotlin.R.drawable.diners)
+                kind_card.setImageResource(R.drawable.diners)
                 return 3
             } else if (Integer.valueOf(bin.substring(0, 2)) == 37) {
-                kind_card.setImageResource(pe.startapps.culqi_kotlin.R.drawable.amex)
+                kind_card.setImageResource(R.drawable.amex)
                 return 3
             } else {
             }
@@ -58,10 +62,10 @@ object CulqiValidation {
 
         if (bin.length > 2) {
             if (Integer.valueOf(bin.substring(0, 3)) == 300) {
-                kind_card.setImageResource(pe.startapps.culqi_kotlin.R.drawable.diners)
+                kind_card.setImageResource(R.drawable.diners)
                 return 3
             } else if (Integer.valueOf(bin.substring(0, 3)) == 305) {
-                kind_card.setImageResource(pe.startapps.culqi_kotlin.R.drawable.diners)
+                kind_card.setImageResource(R.drawable.diners)
                 return 3
             } else {
             }
@@ -92,6 +96,11 @@ object CulqiValidation {
         val p = java.util.regex.Pattern.compile(ePattern)
         val m = p.matcher(email)
         return m.matches()
+    }
+
+    fun currency(code: String) = when (code) {
+        "PEN" -> "S/."
+        else  -> ""
     }
 
 }

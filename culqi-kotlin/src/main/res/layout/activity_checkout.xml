@@ -9,8 +9,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        app:cardBackgroundColor="@android:color/white"
         app:cardCornerRadius="8dp"
-        app:cardElevation="8dp">
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,11 +24,12 @@
             android:padding="16dp">
 
             <TextView
+                android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_form_title"
                 android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                tools:text="@string/txt_form_title"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -60,6 +64,7 @@
                         android:background="@android:color/white"
                         android:hint="@string/txt_card_number"
                         android:inputType="number"
+                        android:maxLines="1"
                         android:padding="4dp"
                         android:textSize="14sp"/>
 
@@ -111,6 +116,7 @@
                             android:hint="@string/txt_date"
                             android:inputType="date"
                             android:maxLength="5"
+                            android:maxLines="1"
                             android:padding="4dp"
                             android:textSize="14sp"/>
 
@@ -150,7 +156,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@android:color/white"
-                            android:hint="@string/txt_cvv2"
+                            android:hint="@string/txt_cvv"
+                            android:inputType="number"
+                            android:maxLines="1"
                             android:padding="4dp"
                             android:textSize="14sp"/>
 
@@ -191,7 +199,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@android:color/white"
-                            android:hint="@string/name"
+                            android:hint="@string/txt_name"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
                             android:padding="4dp"
                             android:textSize="14sp"/>
 
@@ -232,6 +242,8 @@
                             android:layout_height="wrap_content"
                             android:background="@android:color/white"
                             android:hint="@string/txt_lastname"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
                             android:padding="4dp"
                             android:textSize="14sp"/>
 
@@ -263,8 +275,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/white"
-                    android:hint="@string/ic_email"
+                    android:hint="@string/txt_email"
                     android:inputType="textEmailAddress"
+                    android:maxLines="1"
                     android:padding="4dp"
                     android:textSize="14sp"/>
 
@@ -288,8 +301,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
+                        android:alpha="0.7"
                         android:text="@string/txt_button_payment"
-                        android:textColor="#BFFFFFFF"
+                        android:textColor="@android:color/white"
                         android:textSize="16sp"/>
 
                     <TextView
@@ -297,7 +311,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@android:color/white"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         tools:text="S/. 120.50"/>
@@ -309,8 +323,8 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center"
-                    android:visibility="invisible"
-                    app:theme="@style/AppTheme.Checkout.ProgressBar"/>
+                    android:theme="@style/AppTheme.Culqi.ProgressBar"
+                    android:visibility="invisible"/>
 
             </FrameLayout>
 
@@ -322,8 +336,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="@android:color/white"
         app:cardCornerRadius="6dp"
-        app:cardElevation="8dp">
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
 
         <ImageView
             android:layout_width="88dp"
