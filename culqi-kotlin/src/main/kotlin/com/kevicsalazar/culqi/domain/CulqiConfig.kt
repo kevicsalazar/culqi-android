@@ -1,4 +1,4 @@
-package pe.startapps.culqi_kotlin.domain
+package com.kevicsalazar.culqi.domain
 
 /**
  * @author Kevin Salazar

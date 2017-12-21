@@ -1,7 +1,7 @@
-package pe.startapps.culqi_kotlin.domain
+package com.kevicsalazar.culqi.domain
 
 import android.widget.ImageView
-import pe.startapps.culqi_kotlin.R
+import com.kevicsalazar.culqi.R
 import java.util.*
 import java.util.regex.Pattern
 

@@ -1,17 +1,17 @@
-package pe.startapps.culqi_kotlin.domain
+package com.kevicsalazar.culqi.domain
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import pe.startapps.culqi_kotlin.domain.model.CulqiCard
-import pe.startapps.culqi_kotlin.domain.model.CulqiToken
-import pe.startapps.culqi_kotlin.utils.enqueue
+import com.kevicsalazar.culqi.domain.model.CulqiCard
+import com.kevicsalazar.culqi.domain.model.CulqiToken
+import com.kevicsalazar.culqi.utils.enqueue
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
 import retrofit2.http.POST
 import com.google.gson.Gson
-import pe.startapps.culqi_kotlin.domain.model.CulqiError
+import com.kevicsalazar.culqi.domain.model.CulqiError
 
 
 /**
@@ -49,9 +49,9 @@ class TokenBuilder(val apiKey: String) {
         service.createToken(card).enqueue({
             try {
                 if (it.isSuccessful) {
-                    success(it.body())
+                    it.body()?.let(success)
                 } else {
-                    failure(Gson().fromJson(it.errorBody().string(), CulqiError::class.java))
+                    failure(Gson().fromJson(it.errorBody()?.string(), CulqiError::class.java))
                 }
             } catch (e: Exception) {
                 failure(CulqiError("error", e.message ?: "Unknown Error"))

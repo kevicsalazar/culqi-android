@@ -1,20 +1,20 @@
-package pe.startapps.culqi_kotlin.presentation
+package com.kevicsalazar.culqi.presentation
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_checkout.*
-import pe.startapps.culqi_kotlin.R
+import com.kevicsalazar.culqi.R
 import android.text.InputFilter
 import android.view.View
-import pe.startapps.culqi_kotlin.domain.TokenBuilder
-import pe.startapps.culqi_kotlin.domain.model.CulqiCard
-import pe.startapps.culqi_kotlin.utils.textChangedListener
+import com.kevicsalazar.culqi.domain.TokenBuilder
+import com.kevicsalazar.culqi.domain.model.CulqiCard
+import com.kevicsalazar.culqi.utils.textChangedListener
 import android.app.Activity
 import android.content.Intent
 import android.util.Log
 import com.google.gson.Gson
-import pe.startapps.culqi_kotlin.domain.CulqiConfig
-import pe.startapps.culqi_kotlin.domain.CulqiValidation
+import com.kevicsalazar.culqi.domain.CulqiConfig
+import com.kevicsalazar.culqi.domain.CulqiValidation
 
 
 /**

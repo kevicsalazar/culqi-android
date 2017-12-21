@@ -1,15 +1,15 @@
-package pe.startapps.culqi_android
+package com.kevicsalazar.sample.culqi
 
 import android.app.Activity
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import com.kevicsalazar.culqi.domain.CulqiConfig
+import com.kevicsalazar.culqi.domain.CulqiParser
+import com.kevicsalazar.culqi.presentation.CheckoutActivity
+import com.kevicsalazar.sample.culqi.utils.alert
 import kotlinx.android.synthetic.main.activity_main.*
-import pe.startapps.culqi_android.utils.alert
-import pe.startapps.culqi_kotlin.domain.CulqiConfig
-import pe.startapps.culqi_kotlin.presentation.CheckoutActivity
-import pe.startapps.culqi_kotlin.domain.CulqiParser
 
 class MainActivity : AppCompatActivity() {
 

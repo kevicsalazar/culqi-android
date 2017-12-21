@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="pe.startapps.culqi_android">
+          package="com.kevicsalazar.sample.culqi">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="pe.startapps.culqi_kotlin.presentation.CheckoutActivity"
+            android:name="com.kevicsalazar.culqi.presentation.CheckoutActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Culqi.Checkout"/>
     </application>

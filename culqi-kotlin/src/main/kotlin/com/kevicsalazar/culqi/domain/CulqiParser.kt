@@ -1,9 +1,9 @@
-package pe.startapps.culqi_kotlin.domain
+package com.kevicsalazar.culqi.domain
 
 import android.content.Intent
 import com.google.gson.Gson
-import pe.startapps.culqi_kotlin.domain.model.CulqiError
-import pe.startapps.culqi_kotlin.domain.model.CulqiToken
+import com.kevicsalazar.culqi.domain.model.CulqiError
+import com.kevicsalazar.culqi.domain.model.CulqiToken
 
 /**
  * @author Kevin Salazar

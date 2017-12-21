@@ -1,4 +1,4 @@
-package pe.startapps.culqi_android.utils
+package com.kevicsalazar.sample.culqi.utils
 
 import android.content.Context
 import android.support.v7.app.AlertDialog
@@ -14,7 +14,7 @@ fun Context.alert(title: String, message: String,
     setTitle(title)
     setMessage(message)
     setPositiveButton("OK", {
-        dialog, w ->
+        dialog, _ ->
         dialog.dismiss()
     })
     init?.let { init() }

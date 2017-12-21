@@ -1,4 +1,4 @@
-package pe.startapps.culqi_kotlin.domain.model
+package com.kevicsalazar.culqi.domain.model
 
 import com.google.gson.annotations.SerializedName
 

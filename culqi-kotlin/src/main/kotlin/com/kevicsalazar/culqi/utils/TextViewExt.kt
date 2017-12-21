@@ -1,4 +1,4 @@
-package pe.startapps.culqi_kotlin.utils
+package com.kevicsalazar.culqi.utils
 
 import android.widget.TextView
 
@@ -7,9 +7,9 @@ import android.widget.TextView
  * @link kevicsalazar.com
  */
 
-fun TextView.textChangedListener(init: __TextWatcher.() -> Unit) {
+fun TextView.textChangedListener(init: TextWatcher.() -> Unit) {
 
-    val listener = __TextWatcher()
+    val listener = TextWatcher()
 
     listener.init()
 
@@ -17,7 +17,7 @@ fun TextView.textChangedListener(init: __TextWatcher.() -> Unit) {
 
 }
 
-class __TextWatcher : android.text.TextWatcher {
+class TextWatcher : android.text.TextWatcher {
 
     private var _beforeTextChanged: ((CharSequence?, Int, Int, Int) -> Unit)? = null
 
